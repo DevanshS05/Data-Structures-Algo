@@ -2,6 +2,7 @@ package LinkedList;
 
 public class Main {
     public static void main(String[] args) {
+        /*
         SinglyLL ll = new SinglyLL();
 
         //for(int i=0;i<5;i++) ll.insertAtHead(i);
@@ -14,5 +15,22 @@ public class Main {
         ll.deleteAtPos(3);
         ll.print();
         ll.getSize();
+
+         */
+
+        /*
+        DoublyLL l = new DoublyLL();
+        for(int i=1;i<=5;i++) l.insertAtHead(i);
+        l.insertAtTail(69);
+        l.insertAtTail(23);
+        l.deleteAtTail();
+        l.deleteAtHead();
+        l.insertAtPos(3,33);
+        l.deleteAtPos(3);
+        l.print();
+
+         */
+
+
     }
 }
