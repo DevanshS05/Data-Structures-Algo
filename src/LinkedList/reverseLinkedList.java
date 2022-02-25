@@ -5,7 +5,7 @@ public class reverseLinkedList {
         SinglyLL l = new SinglyLL();
         for(int i=1;i<=5;i++) l.insertAtHead(i); //Inserting the elements into the list
 
-        /*
+
         //Method 1: Use O(n) extra space to reverse the list
         SinglyLL revl = new SinglyLL();
 
@@ -14,7 +14,7 @@ public class reverseLinkedList {
 
         l.print(); //Printing the original List
         revl.print(); //Printing the reversed Linked List
-         */
+
 
         //Method 2: In-place reversal of the linked list
         //(Method needed element-wise access hence it is defined in the class SinglyLL itself)

@@ -125,4 +125,35 @@ public class SinglyLL {
         head = prev;
     }
 
+    void middleOfList(){
+        Node first = head;
+        Node second = head;
+        //int counter=0;
+        while(second!=null && second.next!=null){
+            first = first.next;
+            second = second.next.next;
+            //counter++;
+        }
+        //System.out.println(counter);
+       if(second!=null){
+           System.out.println("Middle elements are: "+first.val+" "+first.next.val);
+       }
+       else{
+           System.out.println("Middle element is: "+first.val);
+       }
+    }
+
+    void cycleDetection(){
+        Node slow = head;
+        Node fast = head;
+        while(fast.next!=null && fast.next.next!=null){
+            if(slow.equals(fast)){
+                System.out.println("Cycle exists");
+                return;
+            }
+            slow=slow.next;
+            fast = fast.next.next;
+        }
+        System.out.println("Cycle does not exist");
+    }
 }
