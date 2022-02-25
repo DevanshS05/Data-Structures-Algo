@@ -6,9 +6,12 @@ public class Array {
     Array(int size){
         arr = new int[size];
     }
+    Array(){
+        arr = new int[10];
+    }
 
     void print(){
-        for(int i=0;i<arr.length;i++) System.out.print(arr[i]+" ");
+        for(int i=0;i<=ptr;i++) System.out.print(arr[i]+" ");
     }
 
     void insert(int num){
@@ -40,6 +43,36 @@ public class Array {
             //int num = arr[idx];
             arr[idx] = -1;
             System.out.println("Element at index "+idx+" is removed");
+        }
+    }
+
+    int arrMax(){
+        int max = Integer.MIN_VALUE;
+        for(int i=0;i<=ptr;i++)
+            if(arr[i]>max)
+                max=arr[i];
+
+        return max;
+    }
+
+    void intersection(Array a2){
+        int l1 = ptr;
+        int l2 = a2.ptr;
+
+        int minL = Math.min(l1,l2);
+
+        for(int i=0;i<=minL;i++){
+          if(arr[i]==a2.arr[i]){
+              System.out.println("Insersecting Element: "+arr[i]);
+          }
+        }
+    }
+
+    void reverse(){
+        for(int i=0;i<=ptr/2;i++){
+            int tmp = arr[i];
+            arr[i] = arr[ptr-i];
+            arr[ptr-i]=tmp;
         }
     }
 }
