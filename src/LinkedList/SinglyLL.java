@@ -89,6 +89,14 @@ public class SinglyLL {
         size--;
     }
 
+    int getElement(int pos){
+        Node tmp = head;
+        for(int i=0;i<pos-1;i++){
+            tmp=tmp.next;
+        }
+        return tmp.val;
+    }
+
     void print(){
         Node tmp = head;
         while(tmp!=null){
@@ -98,8 +106,23 @@ public class SinglyLL {
         System.out.println("Tail");
     }
 
-    void getSize(){
-        System.out.println("The current size of the Linked List is:"+size);
+    int getSize(){
+        //System.out.println("The current size of the Linked List is:"+size);
+        return size;
+    }
+
+    void reverseList(){
+        Node prev = null;
+        Node current = head;
+        Node next;
+        while(current!=null){
+            //System.out.print(current.val+" ");
+            next = current.next;
+            current.next = prev;
+            prev= current;
+            current = next;
+        }
+        head = prev;
     }
 
 }
