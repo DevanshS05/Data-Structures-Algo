@@ -1,15 +1,15 @@
 package Queues;
 
-public class Queue {
+public class circularQueue {
     int arr[];
     int last=-1;
     int size=10;
 
-    Queue(int size){
+    circularQueue(int size){
         this.size=size;
         arr = new int[size];
     }
-    Queue(){
+    circularQueue(){
         arr=new int[size];
     }
 
@@ -46,26 +46,17 @@ public class Queue {
         }
     }
 
+    int getElement(int pos){
+        if(last==-1){
+            System.out.println("Queue is already empty!");
+            return -1;
+        }
+        pos = pos%(last+1);
+        return arr[pos];
+    }
+
     void printQueue(){
         for(int i=0;i<=last;i++) System.out.print(arr[i]+"--");
         System.out.println("END");
-    }
-
-    void reverseQueue(){
-        /*
-        //Method 1: Takes O(n) space
-        int newArr[] = new int[size];
-        for(int i=0;i<=last;i++){
-            newArr[i] = arr[last-i];
-        }
-        arr = newArr;
-
-         */
-        //Method 2: Takes O(1) constant space
-        for(int i=0;i<=last/2;i++){
-            int tmp = arr[i];
-            arr[i] = arr[last-i];
-            arr[last-i]=tmp;
-        }
     }
 }
