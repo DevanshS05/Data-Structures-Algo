@@ -33,6 +33,12 @@ public class Main {
 
         CircularLL l = new CircularLL();
         for(int i=1;i<=5;i++) l.insertAtHead(i);
+        //l.insertAtTail(3);
         l.printList();
+        l.removeAtTail();
+        l.removeAtHead();
+        l.removeAtPos(2);
+        l.printList();
+        l.getSize();
     }
 }
