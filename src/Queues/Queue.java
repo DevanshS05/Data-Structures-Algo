@@ -68,4 +68,13 @@ public class Queue {
             arr[last-i]=tmp;
         }
     }
+
+    void reverseQueueUptoK(int pos){
+        pos--;
+        for(int i=0;i<=pos/2;i++){
+            int tmp  = arr[i];
+            arr[i] = arr[pos-i];
+            arr[pos-i]=tmp;
+        }
+    }
 }
