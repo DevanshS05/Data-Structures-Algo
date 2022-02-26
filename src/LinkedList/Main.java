@@ -31,6 +31,8 @@ public class Main {
 
          */
 
-
+        CircularLL l = new CircularLL();
+        for(int i=1;i<=5;i++) l.insertAtHead(i);
+        l.printList();
     }
 }
